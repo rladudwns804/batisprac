@@ -1,12 +1,12 @@
 package com.practice.demo.Abstract;
 
 import com.practice.demo.models.AccountType;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 
 @MappedSuperclass
@@ -25,6 +25,15 @@ public abstract class BankAccount implements  BankAccountInterface {
     private Date dateOpened;
     @Column(nullable = false,updatable = false)
     private AccountType type;
+    @Column
+    @Setter(AccessLevel.NONE)
+    private List<Transaction> transactions = new ArrayList<Transaction>();
+
+    public void setTransactions(Transaction transaction){
+        this.transactions.add(transaction);
+    }
+
+
 
 
 }

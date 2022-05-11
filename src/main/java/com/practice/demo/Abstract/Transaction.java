@@ -9,6 +9,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.Instant;
 import java.util.Date;
 
 @Entity
@@ -30,6 +31,6 @@ public abstract class Transaction implements TransactionInterface {
     private double transactionAmt;
     @Column(name = "Transaction_Date")
     @JsonFormat(pattern = "yyyy-mm-dd")
-    private Date transactionDate;
+    private Instant transactionDate;
 
 }

@@ -7,6 +7,7 @@ import com.practice.demo.models.User;
 import lombok.*;
 
 import javax.persistence.*;
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -19,7 +20,7 @@ import java.util.List;
 @AllArgsConstructor
 public abstract class BankAccount implements  BankAccountInterface {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long accountId;
     @ManyToOne
     @JsonIgnore
@@ -28,10 +29,9 @@ public abstract class BankAccount implements  BankAccountInterface {
     @Column
     private double accountBal;
     @Column(unique = true, nullable = false, updatable = false)
-    private Date dateOpened;
-    @Column(nullable = false,updatable = false)
+    private Instant dateOpened;
+    @Enumerated(EnumType.ORDINAL)
     private AccountType type;
-    @Column(name = "Account_Transactions")
     @OneToMany(mappedBy = "account",cascade = CascadeType.ALL)
     @Setter(AccessLevel.NONE)
     private List<Transaction> transactions = new ArrayList<Transaction>();

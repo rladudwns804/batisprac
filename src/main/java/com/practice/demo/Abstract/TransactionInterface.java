@@ -2,7 +2,7 @@ package com.practice.demo.Abstract;
 
 import com.practice.demo.models.TransactionType;
 
-import java.util.Date;
+import java.time.Instant;
 public interface TransactionInterface {
 
 
@@ -14,8 +14,8 @@ public interface TransactionInterface {
     public void setType(TransactionType type);
     public double getTransactionAmt();
     public void setTransactionAmt(double transactionAmt);
-    public Date getTransactionDate();
-    public void setTransactionDate(Date transactionDate);
+    public Instant getTransactionDate();
+    public void setTransactionDate(Instant transactionDate);
 
 }
 

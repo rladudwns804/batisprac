@@ -1,5 +1,6 @@
 package com.practice.demo.Abstract;
 
+import com.practice.demo.models.TransactionType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

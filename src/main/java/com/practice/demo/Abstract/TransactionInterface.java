@@ -1,7 +1,8 @@
 package com.practice.demo.Abstract;
 
-import java.util.Date;
+import com.practice.demo.models.TransactionType;
 
+import java.util.Date;
 public interface TransactionInterface {
 
 

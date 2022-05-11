@@ -13,7 +13,7 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public abstract class BankAccount {
+public abstract class BankAccount implements  BankAccountInterface {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;

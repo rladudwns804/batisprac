@@ -3,6 +3,11 @@ package com.practice.demo.models;
 import com.practice.demo.Abstract.BankAccount;
 import com.practice.demo.Abstract.Transaction;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name= "SavingAccounts")
 public class SavingAccount extends BankAccount {
 
     public void setTransactions(Transaction transaction){

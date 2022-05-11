@@ -16,8 +16,6 @@ import java.util.List;
 public abstract class BankAccount implements  BankAccountInterface {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
-    @Column(unique = true, nullable = false, updatable = false)
     private long accountNum;
     @Column
     private double accountBal;

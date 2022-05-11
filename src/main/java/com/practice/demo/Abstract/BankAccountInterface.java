@@ -6,8 +6,6 @@ import java.util.Date;
 
 public interface BankAccountInterface {
 
-    public long getId();
-    public void setId(long id);
     public long getAccountNum();
     public void setAccountNum(long accountNum);
     public double getAccountBal();

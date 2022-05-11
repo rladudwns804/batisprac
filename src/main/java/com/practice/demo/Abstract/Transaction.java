@@ -14,13 +14,10 @@ import java.util.Date;
 @AllArgsConstructor
 public abstract class Transaction implements TransactionInterface {
 
-
     private long transactionID;
     private long accountNum;
     private TransactionType type;
     private double transactionAmt;
     private Date transactionDate;
-
-
 
 }

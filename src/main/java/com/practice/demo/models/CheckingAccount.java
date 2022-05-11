@@ -8,7 +8,6 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="CheckingAccounts")
 public class CheckingAccount extends BankAccount {
 
     public void setTransactions(Transaction transaction){

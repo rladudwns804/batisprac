@@ -34,10 +34,9 @@ public class User {
     @Column(name="DOB")
     private String dob;
 
-    @Column(name = "Accounts")
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     @Setter(AccessLevel.NONE)
     private List<BankAccount> accounts = new ArrayList<BankAccount>();
-
     public void setAccounts(BankAccount account){
         accounts.add(account);
     }

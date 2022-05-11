@@ -8,8 +8,8 @@ public interface TransactionInterface {
 
     public long getTransactionID();
     public void setTransactionID(long transactionID);
-    public long getAccountNum();
-    public void setAccountNum(long accountNum);
+    public BankAccount getAccount();
+    public void setAccount(BankAccount account);
     public TransactionType getType();
     public void setType(TransactionType type);
     public double getTransactionAmt();

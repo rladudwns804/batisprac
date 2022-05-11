@@ -1,6 +1,7 @@
 package com.practice.demo.controller;
 
 import com.practice.demo.Error.UserNameExist;
+import com.practice.demo.Error.UserNameNotFound;
 import com.practice.demo.Repositories.UserRepository;
 import com.practice.demo.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,10 +27,14 @@ public class UserController {
     }
     
     @GetMapping(value="/getuser")
-    public User getuser(@RequestParam String username){
+    public User getuser(@RequestParam String username) throws UserNameNotFound {
 
-        return uRepo.findByUsername(username);
-        
+        if(uRepo.findByUsername(username) == null){
+           throw new UserNameNotFound();
+        }
+        else {
+            return uRepo.findByUsername(username);
+        }
     }
 
     @GetMapping(value="/getalluser")

@@ -1,12 +1,15 @@
 package com.practice.demo.Repositories;
 
+import com.practice.demo.Abstract.BankAccount;
 import com.practice.demo.models.CheckingAccount;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-@Repository
-public interface CheckingsRepository extends JpaRepository<CheckingAccount, Long> {
+import java.util.List;
 
-    CheckingAccount findByAccountNum(long id);
+@Repository
+public interface AccountsRepository extends JpaRepository<BankAccount, Long> {
+
+    List<BankAccount> findByAccountNum(long id);
 
 }

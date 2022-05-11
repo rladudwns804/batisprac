@@ -6,7 +6,7 @@ import com.practice.demo.Abstract.Transaction;
 
 public class CheckingAccount extends BankAccount {
 
-    public void setTransaction(Transaction transaction){
+    public void setTransactions(Transaction transaction){
         super.setTransactions(transaction);
     }
 

@@ -12,7 +12,7 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public abstract class Transaction {
+public abstract class Transaction implements TransactionInterface {
 
 
     private long transactionID;
